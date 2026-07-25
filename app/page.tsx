@@ -28,6 +28,7 @@ const works = [
 ];
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <main>
       <header className="site-header">
@@ -94,7 +95,7 @@ export default function Home() {
       <section className="about" id="about">
         <div className="portrait-wrap">
           <span>PORTRAIT / 2026</span>
-          <img src="/yanjun-avatar.jpg" alt="晏君个人头像" />
+          <img src={`${basePath}/yanjun-avatar.jpg`} alt="晏君个人头像" />
         </div>
         <div className="about-copy">
           <p className="eyebrow">ABOUT THE ARTIST</p>
